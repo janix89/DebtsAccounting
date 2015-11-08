@@ -22,14 +22,26 @@ namespace Gramatvediba
 
             dataGridView1.DataSource = dbl.LoanList;
             dataGridView1.BackgroundColor = Color.Silver;
-            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[3].Visible = true;
+
             DataGridViewCellStyle style = new DataGridViewCellStyle();
+            DataGridViewCellStyle styleHeader = new DataGridViewCellStyle();
             style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            styleHeader.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            styleHeader.Padding = new Padding(20, 0, 0, 0);
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Color.DeepSkyBlue;
+            dataGridView1.RowsDefaultCellStyle.SelectionForeColor = Color.Black;
+            dataGridView1.RowHeadersVisible = false;
             foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
-                column.HeaderCell.Style = style;
+                column.HeaderCell.Style = styleHeader;
                 column.DefaultCellStyle = style;
             }
+            dataGridView1.Columns[3].HeaderCell.Style = style;
+            
         }
 
         private void dataGridView1_CellContentClick_3(object sender, DataGridViewCellEventArgs e)
