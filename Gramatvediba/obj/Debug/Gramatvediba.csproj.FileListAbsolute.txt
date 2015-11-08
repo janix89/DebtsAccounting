@@ -1,0 +1,9 @@
+C:\Users\Janix\Desktop\My projects\C#\Gramatvediba\Gramatvediba\bin\Debug\Gramatvediba.exe.config
+C:\Users\Janix\Desktop\My projects\C#\Gramatvediba\Gramatvediba\bin\Debug\Gramatvediba.exe
+C:\Users\Janix\Desktop\My projects\C#\Gramatvediba\Gramatvediba\bin\Debug\Gramatvediba.pdb
+C:\Users\Janix\Desktop\My projects\C#\Gramatvediba\Gramatvediba\obj\Debug\Gramatvediba.csprojResolveAssemblyReference.cache
+C:\Users\Janix\Desktop\My projects\C#\Gramatvediba\Gramatvediba\obj\Debug\Gramatvediba.Form1.resources
+C:\Users\Janix\Desktop\My projects\C#\Gramatvediba\Gramatvediba\obj\Debug\Gramatvediba.Properties.Resources.resources
+C:\Users\Janix\Desktop\My projects\C#\Gramatvediba\Gramatvediba\obj\Debug\Gramatvediba.csproj.GenerateResource.Cache
+C:\Users\Janix\Desktop\My projects\C#\Gramatvediba\Gramatvediba\obj\Debug\Gramatvediba.exe
+C:\Users\Janix\Desktop\My projects\C#\Gramatvediba\Gramatvediba\obj\Debug\Gramatvediba.pdb
