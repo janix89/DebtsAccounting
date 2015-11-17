@@ -13,13 +13,24 @@ namespace Gramatvediba.DBLayer
 {
     class DBLoan
     {
-        public List<Loan> loanList;
+        private List<Loan> loanList;
+        private List<Loan> history;
+
+        public List<Loan> LoanList
+        {
+            get { return loanList; }
+            set { loanList = value; }
+        }
+        public List<Loan> History
+        {
+            get { return history; }
+            set { history = value; }
+        }
+
+
         public DBLoan()
         {
-            //loanList = new List<Loan>();
-            //addSomeData();
-            GetLoanList();
-            //SaveList();
+            RefreshAllLists();
         }
         public void AddLoanToFile(Loan l)
         {
@@ -31,20 +42,17 @@ namespace Gramatvediba.DBLayer
             else
             {
                 list = new List<Loan>();
-                addSomeData();
+                //addSomeData();
             }
             list.Add(l);
             loanList = list;
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Loan>));
-            using (Stream stream = new FileStream("loans.xml", FileMode.Create, FileAccess.Write, FileShare.None))
-            {
-                serializer.Serialize(stream, loanList);
-            }
+            SaveList(loanList, "loans.xml");
         }
 
-        public void GetLoanList()
+        public List<Loan> GetList(string fileName)
         {
-            if (File.Exists("loans.xml"))
+            List<Loan> l;
+            if (File.Exists(fileName))
             {
                 //implementation goes here
 
@@ -52,38 +60,59 @@ namespace Gramatvediba.DBLayer
                 XmlSerializer serializer = new XmlSerializer(typeof(List<Loan>));
 
                 // A FileStream is needed to read the XML document.
-                FileStream fs = new FileStream("loans.xml", FileMode.Open);
+                FileStream fs = new FileStream(fileName, FileMode.Open);
                 XmlReader reader = XmlReader.Create(fs);
 
                 // Declare an object variable of the type to be deserialized.
-                List<Loan> l;
 
                 // Use the Deserialize method to restore the object's state.
                 l = (List<Loan>)serializer.Deserialize(reader);
                 fs.Close();
-                loanList = l;
             }
-           
+            else
+            {
+                l = new List<Loan>();
+            }
+            return l;
         }
-        public List<Loan> LoanList
-        {
-            get { return loanList; }
-            set { loanList = value; }
-        }
-        public void addSomeData()
-        {
-            Loan l1 = new Loan("Janis", 200);
-            Loan l2 = new Loan("Liene", 500);
-            loanList.Add(l1);
-            loanList.Add(l2);
-        }
-        public void SaveList()
+
+        //public void addSomeData()
+        //{
+        //    Loan l1 = new Loan("Janis", 200);
+        //    Loan l2 = new Loan("Liene", 500);
+        //    loanList.Add(l1);
+        //    loanList.Add(l2);
+        //}
+        public void SaveList(List<Loan> l, string listName)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(List<Loan>));
-            using (Stream stream = new FileStream("loans.xml", FileMode.Create, FileAccess.Write, FileShare.None))
+            using (Stream stream = new FileStream(listName, FileMode.Create, FileAccess.Write, FileShare.None))
             {
-                serializer.Serialize(stream, loanList);
+                serializer.Serialize(stream, l);
             }
+        }
+        public void DeleteChosen()
+        {
+            List<Loan> notReturned = new List<Loan>();
+            List<Loan> isReturned = GetList("history.xml");
+            foreach(Loan l in loanList){
+                if(!l.IsReturned){
+                    
+                    notReturned.Add(l);
+                }
+                else
+                {
+                    
+                    isReturned.Add(l);
+                }
+            }
+            SaveList(notReturned, "loans.xml");
+            SaveList(isReturned, "history.xml");
+        }
+        public void RefreshAllLists()
+        {
+           LoanList = GetList("loans.xml");
+           History = GetList("history.xml");
         }
     }
 }

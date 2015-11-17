@@ -7,22 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Gramatvediba.DBLayer;
-using Gramatvediba.ModelLayer;
+using Gramatvediba.ControlLayer;
 
 namespace Gramatvediba
 {
     public partial class Form1 : Form
     {
-        private DBLoan dbl;
+        private LoanCtrl lctrl;
         public Form1()
         {
             InitializeComponent();
-            dbl = new DBLoan();
+            lctrl = new LoanCtrl();
 
-            dataGridView1.DataSource = dbl.LoanList;
+            dataGridView1.DataSource = lctrl.GetList();
             dataGridView1.BackgroundColor = Color.Silver;
             dataGridView1.Columns[3].Visible = true;
+            dataGridView1.Columns[0].ReadOnly = true;
+            dataGridView1.Columns[1].ReadOnly = true;
+            dataGridView1.Columns[2].ReadOnly = true;
 
             DataGridViewCellStyle style = new DataGridViewCellStyle();
             DataGridViewCellStyle styleHeader = new DataGridViewCellStyle();
@@ -43,12 +45,19 @@ namespace Gramatvediba
             dataGridView1.Columns[3].HeaderCell.Style = style;
             
         }
-
         private void dataGridView1_CellContentClick_3(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
+        private void DataGridView1_CellDoubleClick(Object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                PopUp p = new PopUp();
+                p.Index = e.RowIndex;
+                p.Show();
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -56,8 +65,23 @@ namespace Gramatvediba
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dbl.SaveList();
+            lctrl.MoveSelectedToHistory();
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string name = textBox1.Text;
+            int amount = Int32.Parse(textBox2.Text);
+            lctrl.MakeLoan(name,amount);
+            TableUpdate();
+        }
+        public void TableUpdate()
+        {
+            DataSet ds = new DataSet();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = lctrl.GetList();
+            dataGridView1.DataSource = bs;
         }
     }
 }

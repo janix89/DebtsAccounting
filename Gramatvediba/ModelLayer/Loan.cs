@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Globalization;
 
 namespace Gramatvediba.ModelLayer
 {
@@ -15,7 +16,7 @@ namespace Gramatvediba.ModelLayer
         public int Amount { get; set; }
         [DisplayName("Datums")]
         public string Date { get; set; }
-        [DisplayName("Atdots")]
+        [DisplayName("Izvēlēties parādu")]
         public bool IsReturned { get; set; }
 
 
@@ -23,6 +24,9 @@ namespace Gramatvediba.ModelLayer
         {
             Name = name;
             Amount = amount;
+            CultureInfo ci = new CultureInfo("lv-LV");
+            Date = DateTime.Now.ToString("dd-MM-yyyy HH:mm", ci);
+            IsReturned = false;
         }
 
         public Loan()

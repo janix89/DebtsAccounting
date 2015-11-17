@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfLoan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Loan>
+    <Name>Igors</Name>
+    <Amount>600</Amount>
+    <Date>17-11-2015 22:45</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Vitalijs</Name>
+    <Amount>70</Amount>
+    <Date>17-11-2015 22:45</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+</ArrayOfLoan>
