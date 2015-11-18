@@ -19,12 +19,26 @@ namespace Gramatvediba.ControlLayer
         public void MakeLoan(string name, int amount)
         {
             Loan l = new Loan(name, amount);
-            DBLoan dbl = new DBLoan();
             dbl.AddLoanToFile(l);
         }
-        public List<Loan> GetList()
+        //public List<Loan> GetList()
+        //{
+        //    return dbl.GetList("loans.xml");
+        //}
+        public List<Loan> GetDirectList(string listName)
         {
-            return dbl.GetList("loans.xml");
+            if (listName.Equals("loans"))
+            {
+                return dbl.LoanList;
+            }
+            else if (listName.Equals("history"))
+            {
+                return dbl.History;
+            }
+            else
+            {
+                return null;
+            }
         }
         public Loan GetLoan(int index)
         {
@@ -43,7 +57,6 @@ namespace Gramatvediba.ControlLayer
             //dbl.SaveList(dbl.LoanList, "loans.xml");
             dbl.History.Add(l);
             dbl.DeleteChosen();
-            dbl.RefreshAllLists();
         }
         public void MoveSelectedToHistory()
         {

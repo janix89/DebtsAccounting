@@ -12,4 +12,202 @@
     <Date>17-11-2015 22:45</Date>
     <IsReturned>true</IsReturned>
   </Loan>
+  <Loan>
+    <Name>Janis</Name>
+    <Amount>89</Amount>
+    <Date>17-11-2015 22:44</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Renars</Name>
+    <Amount>500</Amount>
+    <Date>18-11-2015 12:33</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Liene</Name>
+    <Amount>200</Amount>
+    <Date>18-11-2015 12:32</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Janis</Name>
+    <Amount>89</Amount>
+    <Date>17-11-2015 22:44</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Ilgvars</Name>
+    <Amount>90</Amount>
+    <Date>18-11-2015 12:46</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Alex</Name>
+    <Amount>90</Amount>
+    <Date>18-11-2015 13:13</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>c</Name>
+    <Amount>5</Amount>
+    <Date>18-11-2015 13:45</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Ilgonis</Name>
+    <Amount>909</Amount>
+    <Date>18-11-2015 13:13</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>d</Name>
+    <Amount>5</Amount>
+    <Date>18-11-2015 13:45</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Vasja</Name>
+    <Amount>9000</Amount>
+    <Date>18-11-2015 14:02</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>b</Name>
+    <Amount>5</Amount>
+    <Date>18-11-2015 13:45</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>a</Name>
+    <Amount>5</Amount>
+    <Date>18-11-2015 13:45</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>e</Name>
+    <Amount>5</Amount>
+    <Date>18-11-2015 13:45</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Ome</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:04</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Elina</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:04</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Vasja</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:04</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Garik</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:04</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Renars</Name>
+    <Amount>788</Amount>
+    <Date>18-11-2015 14:12</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Loha</Name>
+    <Amount>788</Amount>
+    <Date>18-11-2015 14:12</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Mamma</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:18</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Janis</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:18</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Renars</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:18</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Renars</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:23</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Elina</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:23</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Liene</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:18</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Elina</Name>
+    <Amount>700</Amount>
+    <Date>18-11-2015 14:29</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Liene</Name>
+    <Amount>700</Amount>
+    <Date>18-11-2015 14:29</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Keita</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:23</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Renars</Name>
+    <Amount>700</Amount>
+    <Date>18-11-2015 14:30</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Liene</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:43</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Mamma</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:43</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Renars</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:43</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
+  <Loan>
+    <Name>Elina</Name>
+    <Amount>900</Amount>
+    <Date>18-11-2015 14:43</Date>
+    <IsReturned>true</IsReturned>
+  </Loan>
 </ArrayOfLoan>

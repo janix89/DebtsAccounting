@@ -108,6 +108,7 @@ namespace Gramatvediba.DBLayer
             }
             SaveList(notReturned, "loans.xml");
             SaveList(isReturned, "history.xml");
+            //RefreshAllLists();
         }
         public void RefreshAllLists()
         {

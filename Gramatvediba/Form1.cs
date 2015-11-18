@@ -18,8 +18,9 @@ namespace Gramatvediba
         {
             InitializeComponent();
             lctrl = new LoanCtrl();
-
-            dataGridView1.DataSource = lctrl.GetList();
+            // To get the right list enter string name of the list, this is made for direct access
+            // to the list so the checkboxes respond directly
+            dataGridView1.DataSource = lctrl.GetDirectList("loans");
             dataGridView1.BackgroundColor = Color.Silver;
             dataGridView1.Columns[3].Visible = true;
             dataGridView1.Columns[0].ReadOnly = true;
@@ -66,6 +67,7 @@ namespace Gramatvediba
         private void button1_Click(object sender, EventArgs e)
         {
             lctrl.MoveSelectedToHistory();
+            TableUpdate();
             
         }
 
@@ -78,10 +80,19 @@ namespace Gramatvediba
         }
         public void TableUpdate()
         {
+            lctrl = new LoanCtrl();
             DataSet ds = new DataSet();
             BindingSource bs = new BindingSource();
-            bs.DataSource = lctrl.GetList();
+            bs.DataSource = lctrl.GetDirectList("loans");
             dataGridView1.DataSource = bs;
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                button2.PerformClick();
+            }
         }
     }
 }

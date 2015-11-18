@@ -1,9 +1,2 @@
 <?xml version="1.0"?>
-<ArrayOfLoan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Loan>
-    <Name>Janis</Name>
-    <Amount>89</Amount>
-    <Date>17-11-2015 22:44</Date>
-    <IsReturned>false</IsReturned>
-  </Loan>
-</ArrayOfLoan>
+<ArrayOfLoan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />

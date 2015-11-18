@@ -15,13 +15,14 @@ namespace Gramatvediba
     public partial class PopUp : Form
     {
         public int Index { get; set; }
+        private LoanCtrl lc;
         public PopUp()
         {
             InitializeComponent();
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
-            LoanCtrl lc = new LoanCtrl();
+            lc = new LoanCtrl();
             textBox1.Text = lc.GetLoan(Index).Name;
             textBox2.Text = lc.GetLoan(Index).Amount.ToString();
             textBox3.Text = lc.GetLoan(Index).Date;
@@ -34,10 +35,8 @@ namespace Gramatvediba
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LoanCtrl lctrl = new LoanCtrl();
-            lctrl.GetLoan(Index).IsReturned = true;
-            lctrl.MoveSelectedToHistory();
-            //Form1.ActiveForm.Invalidate();
+            lc.GetDirectList("loans").ElementAt(Index).IsReturned = true;
+            lc.MoveSelectedToHistory();
             if (System.Windows.Forms.Application.OpenForms["Form1"] != null)
             {
                 (System.Windows.Forms.Application.OpenForms["Form1"] as Form1).TableUpdate();

@@ -40,7 +40,6 @@ namespace Gramatvediba
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-
             // 
             // dataGridView1
             // 
@@ -69,7 +68,7 @@ namespace Gramatvediba
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(253, 53);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Save";
+            this.button1.Text = "Dzēst parādus";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -104,6 +103,7 @@ namespace Gramatvediba
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(182, 22);
             this.textBox2.TabIndex = 5;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // button2
             // 
